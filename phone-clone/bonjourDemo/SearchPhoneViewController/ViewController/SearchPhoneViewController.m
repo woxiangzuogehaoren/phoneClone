@@ -132,6 +132,11 @@
     }
     
 }
+-(void)netServiceDidStop:(NSNetService *)sender{
+    
+    NSLog(@"解析超时%ld",sender.port);
+    
+}
 //解析服务失败，解析出错
 - (void)netService:(NSNetService *)netService didNotResolve:(NSDictionary *)errorDict {
     

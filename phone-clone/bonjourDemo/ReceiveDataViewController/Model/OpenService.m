@@ -52,7 +52,8 @@ static OpenService * _openService = nil;
         self.localService = [[NSNetService alloc] initWithDomain:KDomainString type:KBonjourType name:[UIDevice currentDevice].name ];
         
     }
-    //一定要先开启
+    //一定要先开启，指定是否发布，解决，监听服务，在对蓝牙和WIFI可用，没有默认值。
+    //此属性必须设置调用发布或publishwithoptions之前，resolvewithtimeout：`，或startmonitoring才能生效。
     self.localService.includesPeerToPeer =YES;
     
     self.localService .delegate=self;
