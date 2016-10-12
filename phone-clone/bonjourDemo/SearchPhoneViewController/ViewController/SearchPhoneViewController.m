@@ -134,7 +134,7 @@
 }
 -(void)netServiceDidStop:(NSNetService *)sender{
     
-    NSLog(@"解析超时%ld",sender.port);
+    NSLog(@"解析超时%ld",(long)sender.port);
     
 }
 //解析服务失败，解析出错

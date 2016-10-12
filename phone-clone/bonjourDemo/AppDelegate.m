@@ -32,8 +32,9 @@
     
     [application setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
     
+    NSLog(@"%f",[[[UIDevice currentDevice]systemVersion]floatValue]);
     ContactModel * contactModel = [ContactModel shareContactModel];
-    //通讯录授权
+//    //通讯录授权
     if (ISIOS9) {
 
         [contactModel contactBookAuthorization];
